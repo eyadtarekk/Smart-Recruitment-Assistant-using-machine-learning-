@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Recruitment Dashboard</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 24px; background: #f7f8fb; color: #1f2937; }
+    h1 { margin-bottom: 8px; }
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; margin: 20px 0; }
+    .card { background: white; padding: 16px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    table { width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; }
+    th, td { padding: 10px; border-bottom: 1px solid #e5e7eb; text-align: left; }
+    th { background: #eef2ff; }
+    img { width: 100%; max-width: 1000px; border-radius: 8px; margin-top: 16px; }
+  </style>
+</head>
+<body>
+  <h1>Smart Recruitment Assistant Dashboard</h1>
+  
+  <div class="cards">
+    <div class="card"><strong>Best Model by F1</strong><br />Gradient Boosting</div>
+    <div class="card"><strong>Top Candidate</strong><br />ID 24082 (0.870)</div>
+    <div class="card"><strong>Top Feature</strong><br />num__city_development_index</div>
+  </div>
+
+  <h2>Model Metrics</h2>
+  <table>
+    <thead><tr><th>Model</th><th>Accuracy</th><th>F1</th><th>ROC AUC</th></tr></thead>
+    <tbody><tr><td>Logistic Regression</td><td>0.782</td><td>0.483</td><td>0.805</td></tr><tr><td>Random Forest</td><td>0.791</td><td>0.548</td><td>0.808</td></tr><tr><td>Gradient Boosting</td><td>0.792</td><td>0.567</td><td>0.812</td></tr></tbody>
+  </table>
+
+  <h2>Visual Summary</h2>
+  <img src="simple_dashboard.png" alt="Recruitment dashboard chart" />
+
+  <h2>Top 10 Candidates</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Rank</th>
+        <th>Enrollee ID</th>
+        <th>City</th>
+        <th>Education Level</th>
+        <th>Experience</th>
+        <th>Company Type</th>
+        <th>Training Hours</th>
+        <th>Relevant Experience</th>
+        <th>Predicted Probability</th>
+      </tr>
+    </thead>
+    <tbody><tr><td>1</td><td>24082</td><td>city_21</td><td>3.0</td><td>6.0</td><td>Pvt Ltd</td><td>8</td><td>Has relevent experience</td><td>0.870</td></tr><tr><td>2</td><td>12588</td><td>city_11</td><td>2.0</td><td>3.0</td><td>Other</td><td>72</td><td>No relevent experience</td><td>0.856</td></tr><tr><td>3</td><td>15294</td><td>city_11</td><td>2.0</td><td>4.0</td><td>Other</td><td>55</td><td>No relevent experience</td><td>0.849</td></tr><tr><td>4</td><td>731</td><td>city_11</td><td>2.0</td><td>5.0</td><td>Other</td><td>51</td><td>No relevent experience</td><td>0.848</td></tr><tr><td>5</td><td>24296</td><td>city_21</td><td>2.0</td><td>5.0</td><td>Pvt Ltd</td><td>16</td><td>Has relevent experience</td><td>0.843</td></tr><tr><td>6</td><td>20522</td><td>city_21</td><td>3.0</td><td>4.0</td><td>Pvt Ltd</td><td>8</td><td>Has relevent experience</td><td>0.841</td></tr><tr><td>7</td><td>24089</td><td>city_21</td><td>2.0</td><td>1.0</td><td>Pvt Ltd</td><td>16</td><td>Has relevent experience</td><td>0.840</td></tr><tr><td>8</td><td>20353</td><td>city_21</td><td>3.0</td><td>15.0</td><td>Pvt Ltd</td><td>9</td><td>Has relevent experience</td><td>0.837</td></tr><tr><td>9</td><td>14421</td><td>city_21</td><td>3.0</td><td>3.0</td><td>Pvt Ltd</td><td>9</td><td>Has relevent experience</td><td>0.834</td></tr><tr><td>10</td><td>6879</td><td>city_21</td><td>2.0</td><td>1.0</td><td>Pvt Ltd</td><td>18</td><td>Has relevent experience</td><td>0.830</td></tr></tbody>
+  </table>
+
+  
+</body>
+</html>
